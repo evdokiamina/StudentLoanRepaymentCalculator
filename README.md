@@ -1,7 +1,7 @@
 # Student Loan Repayment Calculator
 Student loan repayment Calculator
 
-## This is a calculator to help calculate how much you will pay over the years to your Student Loan
+### This is a calculator to help calculate how much you will pay over the years to your Student Loan
 It is based on the current variables as of the time of creating this (December 18th 2021).
 This is a rough estimate.
 
