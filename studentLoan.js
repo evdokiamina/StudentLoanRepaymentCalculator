@@ -52,7 +52,7 @@ const calculateYearsToRepay = (salary, loan, age, interest) => {
 const main = () => {
   const salary = Number(prompt("Please enter your salary: ", 0));
   const currentLoan = Number(
-    prompt("Please enter your current student loan balance: ", 10)
+    prompt("Please enter your current student loan balance: ", 0)
   );
   const age = Number(prompt("Please enter your current age: ", 0));
   const interest = Number(
