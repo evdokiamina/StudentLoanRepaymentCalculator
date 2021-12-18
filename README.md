@@ -1,4 +1,4 @@
-# StudentLoanRepaymentCalculator
+# Student Loan Repayment Calculator
 Student loan repayment Calculator
 
 ## This is a calculator to help calculate how much you will pay over the years to your Student Loan
