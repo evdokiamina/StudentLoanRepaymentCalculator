@@ -10,7 +10,18 @@ const calculateYearsToRepay = (salary, loan, age, interest) => {
   const repaymentPercentage = 0.09;
   const toPay = ((salary - repaymentThreshold) * repaymentPercentage) / 12;
   const year = new Date().getFullYear();
-
+  if (salary < repaymentThreshold) {
+    console.log(
+      "You will not have to repay your Student Loan sd your salary is less than £" +
+        repaymentThreshold
+    );
+    return {
+      totalPaid: 0,
+      loanRemaining: 0,
+      finalYear: 0,
+      amountPerMonth: 0,
+    };
+  }
   let updatedLoanRemaining = loan;
   let totalPaid = 0;
   let exitedMonth = 0;
@@ -65,24 +76,28 @@ const main = () => {
     return console.log("Please enter valid details");
   }
   const {
-    totalPaid = 0.0,
-    loanRemaining = 0.0,
-    finalYear,
-    amountPerMonth,
+    totalPaid = 0,
+    loanRemaining = 0,
+    finalYear = 0,
+    amountPerMonth = 0,
   } = calculateYearsToRepay(salary, currentLoan, age, interest);
 
-  console.log("You have paid: £", totalPaid.toFixed(2));
-  console.log("Remaining Loan: £", loanRemaining.toFixed(2));
-  console.log("You would have paid per Month: £", amountPerMonth.toFixed(2));
-  console.log(
-    "You would have paid per Year: £",
-    amountPerMonth.toFixed(2) * 12
-  );
-  console.log(
-    "It would take you " +
-      finalYear.toFixed(1) +
-      " year(s) to repay the student loan"
-  );
+  if (totalPaid > 0) {
+    console.log("You have paid: £", totalPaid.toFixed(2));
+    console.log("Remaining Loan: £", loanRemaining.toFixed(2));
+    console.log("You would have paid per Month: £", amountPerMonth.toFixed(2));
+    console.log(
+      "You would have paid per Year: £",
+      amountPerMonth.toFixed(2) * 12
+    );
+    console.log(
+      finalYear === 0
+        ? "You will not be able to fully repay your Student Loan by the age of 40"
+        : "It would take you " +
+            finalYear.toFixed(1) +
+            " year(s) to repay the student loan"
+    );
+  }
 };
 
 main();
