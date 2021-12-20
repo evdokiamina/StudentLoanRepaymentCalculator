@@ -16,4 +16,4 @@ https://www.manage-student-loan-balance.service.gov.uk/ors/account-overview/secu
 # To Run 
 ### Requires node.js
 
-To run this code clone the repo and run `node studentLoan.js` on your terminal
+To run this code clone the repo and run `node studentLoan.js` on your terminal in the folder where this solution exists
